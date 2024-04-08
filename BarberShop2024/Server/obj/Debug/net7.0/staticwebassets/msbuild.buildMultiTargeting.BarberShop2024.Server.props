@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BarberShop2024.Server.props" />
+</Project>
