@@ -19,3 +19,10 @@ Entity Framework Core: ORM (Object-Relational Mapping) framework for .NET to wor
 HTML/CSS/JavaScript: Frontend technologies for designing and developing the user interface.
 SQLite/SQL Server: Databases used for storing application data.
 Bootstrap: Frontend framework for building responsive and mobile-first websites.
+
+
+### Acknowledgements
+Blazor Documentation
+ASP.NET Core Documentation
+Entity Framework Core Documentation
+Bootstrap Documentation
