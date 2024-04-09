@@ -26,9 +26,5 @@
     <ProjectReference Include="..\Shared\BarberShop2024.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 
 </Project>
