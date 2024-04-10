@@ -23,20 +23,20 @@ namespace BarberShop2024.Server.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"An error occurred while fetching users: {ex.Message}");
+                return StatusCode(500, $"An error occurred while fetching customer: {ex.Message}");
             }
         }
 
-        [HttpGet("{userId}")]
-        public IActionResult GetUserById(int userId)
+        [HttpGet("{customerId}")]
+        public IActionResult GetCustomerById(int customerId)
         {
             try
             {
-                return Ok(_customerModel.GetCustomerById(userId));
+                return Ok(_customerModel.GetCustomerById(customerId));
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"An error occurred while fetching the user: {ex.Message}");
+                return StatusCode(500, $"An error occurred while fetching the customer: {ex.Message}");
             }
         }
         /*
