@@ -1,28 +1,25 @@
-﻿using BarberShop2024.Server.Data;
-using BarberShop2024.Server.Model;
-using BarberShop2024.Shared;
+﻿using BarberShop2024.Server.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace BarberShop2024.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class CustomerController : ControllerBase
     {
-        private readonly IUserModel _userModel;
-        
-        public UserController(IUserModel userModel)
+        private readonly ICustomerModel _customerModel;
+
+        public CustomerController(ICustomerModel customerModel)
         {
-            _userModel = userModel;
+            _customerModel = customerModel;
         }
         [HttpGet]
         public IActionResult GetAllUsers()
         {
             try
             {
-                return Ok(_userModel.GetAllUsers());
+                return Ok(_customerModel.GetAllCustomer());
             }
             catch (Exception ex)
             {
@@ -35,26 +32,28 @@ namespace BarberShop2024.Server.Controllers
         {
             try
             {
-                return Ok(_userModel.GetUserById(userId));
+                return Ok(_customerModel.GetCustomerById(userId));
             }
             catch (Exception ex)
             {
                 return StatusCode(500, $"An error occurred while fetching the user: {ex.Message}");
             }
         }
+        /*
         [HttpDelete("{id}")]
-        public IActionResult UserToDelete(int id)
+        public IActionResult CustomerDelete(int id)
         {
             if (id == 0)
                 return BadRequest();
 
-            var userToDelete = _userModel.GetUserById(id);
-            if (userToDelete == null)
+            var customerToDelete = _customerModel.DeleteCustomer(int id);
+            if (customerToDelete == null)
                 return NotFound();
 
-            _userModel.DeleteUser(id);
+            _customerModel.DeleteCustomer(id);
 
             return NoContent();
-        }
+        }*/
     }
 }
+

@@ -31,10 +31,10 @@ namespace BarberShop2024.Server.Model
         {
             return _context.Users.FirstOrDefault(c => c.UserId == userId);
         }
-        /*
+      
         public User UpdateUser(User user)
         {
             throw new NotImplementedException();
-        }*/
+        }
     }
 }
