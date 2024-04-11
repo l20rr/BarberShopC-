@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HOWzQKPE4HM0oyBUlNaaGsIXwo4yoE7rGycyISAzuRgOR9M4trxCldIT6FRNqyUHP/+q62/Y8nPxEQy7w+ys7w==",
+  "dgSpecHash": "gaitlPqI/LPs18asLLHt46JVsOKKE7Jrs9l6nSLd8bo0tkWnC2FOdMF3uf79yAno+4rd6jjUu49FyNURQfYtmQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\BarberShop2024.Client.csproj",
   "expectedPackageFiles": [
@@ -31,7 +31,7 @@
     "C:\\Users\\35193\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\35193\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\35193\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\35193\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.17\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.17.nupkg.sha512"
+    "C:\\Users\\35193\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.18\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.18.nupkg.sha512"
   ],
   "logs": []
 }
