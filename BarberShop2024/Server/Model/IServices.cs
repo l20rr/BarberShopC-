@@ -7,7 +7,7 @@ namespace BarberShop2024.Server.Model
         IEnumerable<ServicesBarber> GetAllServices();
         ServicesBarber GetServicesById(int serviceId);
         Task<ServicesBarber> AddServices(ServicesBarber servicesBarber);
-        ServicesBarber UpdateServices(ServicesBarber servicesBarber);
+        ServicesBarber UpdateServices( int serviceId, ServicesBarber servicesBarber);
         void DeleteServices(int serviceId);
     }
 }

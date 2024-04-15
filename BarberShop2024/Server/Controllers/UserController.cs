@@ -56,5 +56,30 @@ namespace BarberShop2024.Server.Controllers
 
             return NoContent();
         }
+        [HttpPut("{userId}")]
+        public IActionResult UpdateUser(int userId, [FromBody] User user)
+        {
+            var updatedUser = _userModel.UpdateUser(userId, user);
+
+            if (updatedUser == null)
+            {
+                return NotFound(); // Retorna 404 se o usuário não for encontrado
+            }
+
+            return Ok(updatedUser); // Retorna 200 com os dados do usuário atualizados
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddUser([FromBody] User user)
+        {
+            var addedUser = await _userModel.AddUser(user);
+
+            if (addedUser == null)
+            {
+                return BadRequest(); // Retorna 400 se não for possível adicionar o usuário
+            }
+
+            return CreatedAtAction(nameof(GetAllUsers), new { userId = addedUser.UserId }, addedUser); // Retorna 201 com os dados do usuário adicionado
+        }
     }
 }

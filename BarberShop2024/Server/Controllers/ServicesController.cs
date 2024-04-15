@@ -1,4 +1,5 @@
 ﻿using BarberShop2024.Server.Model;
+using BarberShop2024.Shared;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -51,6 +52,18 @@ namespace BarberShop2024.Server.Controllers
             _serviceModel.DeleteServices(serviceId);
 
             return NoContent();
+        }
+        [HttpPut("{serviceId}")]
+        public IActionResult UpdateUser(int serviceId, [FromBody] ServicesBarber servicesBarber)
+        {
+            var updatedServices = _serviceModel.UpdateServices(serviceId, servicesBarber);
+
+            if (updatedServices == null)
+            {
+                return NotFound(); // Retorna 404 se não for encontrado
+            }
+
+            return Ok(updatedServices); // Retorna 200 com os dados  atualizados
         }
     }
 }

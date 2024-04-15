@@ -32,9 +32,28 @@ namespace BarberShop2024.Server.Model
             return _context.ServicesBarbers.FirstOrDefault(c => c.ServiceId == serviceId);
         }
 
-        public ServicesBarber UpdateServices(ServicesBarber servicesBarber)
+        public ServicesBarber UpdateServices(int serviceId,ServicesBarber servicesBarber)
         {
-            throw new NotImplementedException();
+            var foundServer = _context.ServicesBarbers.FirstOrDefault(e => e.ServiceId == serviceId);
+
+            if (foundServer != null)
+            {
+
+                foundServer.ServiceName = servicesBarber.ServiceName;
+                foundServer.ServiceDescription = servicesBarber.ServiceDescription;
+                foundServer.ServicePrice = servicesBarber.ServicePrice;
+             
+
+
+                _context.SaveChangesAsync();
+
+                return foundServer;
+            }
+
+            return null;
+
         }
+
+       
     }
 }
