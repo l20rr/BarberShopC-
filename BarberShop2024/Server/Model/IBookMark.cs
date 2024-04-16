@@ -7,7 +7,7 @@ namespace BarberShop2024.Server.Model
         IEnumerable<BookMark> GetAllBooks();
         BookMark GetBookById(int bookMarkId);
         Task<BookMark> AddBook(BookMark bookMark );
-        BookMark UpdateBook(BookMark bookMark);
+        BookMark UpdateBook(int bookMarkId, BookMark bookMark);
         void DeleteBook(int bookMarkId);
     }
 }

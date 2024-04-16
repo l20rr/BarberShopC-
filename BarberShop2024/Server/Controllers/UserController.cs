@@ -42,17 +42,17 @@ namespace BarberShop2024.Server.Controllers
                 return StatusCode(500, $"An error occurred while fetching the user: {ex.Message}");
             }
         }
-        [HttpDelete("{id}")]
-        public IActionResult UserToDelete(int id)
+        [HttpDelete("{userId}")]
+        public IActionResult UserToDelete(int userId)
         {
-            if (id == 0)
+            if (userId == 0)
                 return BadRequest();
 
-            var userToDelete = _userModel.GetUserById(id);
+            var userToDelete = _userModel.GetUserById(userId);
             if (userToDelete == null)
                 return NotFound();
 
-            _userModel.DeleteUser(id);
+            _userModel.DeleteUser(userId);
 
             return NoContent();
         }

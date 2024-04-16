@@ -34,7 +34,21 @@ namespace BarberShop2024.Server.Model
 
         public BookMark UpdateBook(BookMark bookMark)
         {
-            throw new NotImplementedException();
+            var foundBook= _context.BookMarks.FirstOrDefault(e => e.BookMarkId == bookMark.BookMarkId);
+
+            if (foundBook != null)
+            {
+
+                foundBook.DateBook = bookMark.DateBook;
+             
+
+
+                _context.SaveChangesAsync();
+
+                return foundBook;
+            }
+
+            return null;
         }
     }
 }

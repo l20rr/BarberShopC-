@@ -1,4 +1,5 @@
 ﻿using BarberShop2024.Server.Model;
+using BarberShop2024.Shared;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,7 +16,7 @@ namespace BarberShop2024.Server.Controllers
             _customerModel = customerModel;
         }
         [HttpGet]
-        public IActionResult GetAllUsers()
+        public IActionResult GetAllCostumer()
         {
             try
             {
@@ -39,21 +40,47 @@ namespace BarberShop2024.Server.Controllers
                 return StatusCode(500, $"An error occurred while fetching the customer: {ex.Message}");
             }
         }
-        /*
-        [HttpDelete("{id}")]
-        public IActionResult CustomerDelete(int id)
+        
+        [HttpDelete("{customerId}")]
+        public IActionResult CustomerDelete(int customerId)
         {
-            if (id == 0)
+            if (customerId == 0)
                 return BadRequest();
 
-            var customerToDelete = _customerModel.DeleteCustomer(int id);
-            if (customerToDelete == null)
+            var CustomerToDelete = _customerModel.GetCustomerById(customerId);
+            if (CustomerToDelete == null)
                 return NotFound();
 
-            _customerModel.DeleteCustomer(id);
+            _customerModel.DeleteCustomer(customerId);
 
             return NoContent();
-        }*/
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddCostumer([FromBody] Customer customer)
+        {
+            var addedCostumer = await _customerModel.AddCustomer(customer);
+
+            if (addedCostumer == null)
+            {
+                return BadRequest(); // Retorna 400 se não for possível adicionar o serviço
+            }
+
+            return CreatedAtAction(nameof(GetAllCostumer), new { c = addedCostumer.CustomerId }, addedCostumer); // Retorna 201 com os dados do serviço adicionado
+        }
+
+        [HttpPut("{customerId}")]
+        public IActionResult UpdateCustomer(int customerId, [FromBody] Customer customer)
+        {
+            var updateCustomer = _customerModel.UpdateCustomer(customerId, customer);
+
+            if (updateCustomer == null)
+            {
+                return NotFound(); // Retorna 404 se não for encontrado
+            }
+
+            return Ok(updateCustomer); // Retorna 200 com os dados  atualizados
+        }
     }
 }
 

@@ -33,9 +33,25 @@ namespace BarberShop2024.Server.Model
             return _context.Customers.FirstOrDefault(c => c.CustomerId == customerId);
         }
 
-        public Customer UpdateCustomer(Customer customer)
+        public Customer UpdateCustomer( Customer customer)
         {
-            throw new NotImplementedException();
+
+            var foundCustomer = _context.Customers.FirstOrDefault(e => e.CustomerId == customer.CustomerId);
+
+            if (foundCustomer != null)
+            {
+
+                foundCustomer.CustomerName = customer.CustomerName;
+                foundCustomer.CustomerEmail = customer.CustomerEmail;
+
+
+                _context.SaveChangesAsync();
+
+                return foundCustomer;
+            }
+
+            return null;
+
         }
     }
 }

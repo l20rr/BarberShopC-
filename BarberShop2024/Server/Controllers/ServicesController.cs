@@ -40,7 +40,7 @@ namespace BarberShop2024.Server.Controllers
             }
         }
         [HttpDelete("{serviceId}")]
-        public IActionResult UserToDelete(int serviceId)
+        public IActionResult ServicesToDelete(int serviceId)
         {
             if (serviceId == 0)
                 return BadRequest();
@@ -54,7 +54,7 @@ namespace BarberShop2024.Server.Controllers
             return NoContent();
         }
         [HttpPut("{serviceId}")]
-        public IActionResult UpdateUser(int serviceId, [FromBody] ServicesBarber servicesBarber)
+        public IActionResult UpdateServices(int serviceId, [FromBody] ServicesBarber servicesBarber)
         {
             var updatedServices = _serviceModel.UpdateServices(serviceId, servicesBarber);
 
@@ -64,6 +64,18 @@ namespace BarberShop2024.Server.Controllers
             }
 
             return Ok(updatedServices); // Retorna 200 com os dados  atualizados
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddService([FromBody] ServicesBarber servicesBarber)
+        {
+            var addedService = await _serviceModel.AddServices(servicesBarber);
+
+            if (addedService == null)
+            {
+                return BadRequest(); // Retorna 400 se não for possível adicionar o serviço
+            }
+
+            return CreatedAtAction(nameof(GetAllServices), new { serviceId = addedService.ServiceId }, addedService); // Retorna 201 com os dados do serviço adicionado
         }
     }
 }
