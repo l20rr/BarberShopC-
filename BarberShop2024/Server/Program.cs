@@ -1,4 +1,5 @@
 using BarberShop2024.Server.Data;
+using BarberShop2024.Server.Model;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +10,14 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+
+
+// Configure os serviços
+builder.Services.AddScoped<IServices, ServiceModel>();
+builder.Services.AddScoped<ICustomerModel, CustomerModel>();
+builder.Services.AddScoped<IBookMark, BookMarkModel>();
+builder.Services.AddScoped<IUserModel, UserModel>();
 
 var app = builder.Build();
 

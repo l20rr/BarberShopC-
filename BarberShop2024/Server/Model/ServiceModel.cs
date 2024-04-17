@@ -1,11 +1,17 @@
 ﻿using BarberShop2024.Server.Data;
 using BarberShop2024.Shared;
+using System;
 
 namespace BarberShop2024.Server.Model
 {
     public class ServiceModel : IServices
     {
         private readonly DataContext _context;
+
+        public ServiceModel(DataContext context)
+        {
+            _context = context;
+        }
         public async Task<ServicesBarber> AddServices(ServicesBarber servicesBarber)
         {
             var result = await _context.ServicesBarbers.AddAsync(servicesBarber);

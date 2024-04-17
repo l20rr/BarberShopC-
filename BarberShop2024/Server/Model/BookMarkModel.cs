@@ -32,7 +32,7 @@ namespace BarberShop2024.Server.Model
             return _context.BookMarks.FirstOrDefault(c => c.BookMarkId == bookMarkId);
         }
 
-        public BookMark UpdateBook(BookMark bookMark)
+        public BookMark UpdateBook(int bookMarkId, BookMark bookMark)
         {
             var foundBook= _context.BookMarks.FirstOrDefault(e => e.BookMarkId == bookMark.BookMarkId);
 

@@ -7,6 +7,11 @@ namespace BarberShop2024.Server.Model
     {
         private readonly DataContext _context;
 
+        public CustomerModel(DataContext context)
+        {
+            _context = context;
+        }
+
         public async Task<Customer> AddCustomer(Customer customer)
         {
             var result = await _context.Customers.AddAsync(customer);
@@ -33,7 +38,7 @@ namespace BarberShop2024.Server.Model
             return _context.Customers.FirstOrDefault(c => c.CustomerId == customerId);
         }
 
-        public Customer UpdateCustomer( Customer customer)
+        public Customer UpdateCustomer(int customerId, Customer customer)
         {
 
             var foundCustomer = _context.Customers.FirstOrDefault(e => e.CustomerId == customer.CustomerId);
