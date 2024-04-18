@@ -22,19 +22,22 @@ namespace BarberShop2024.Server.Data
             modelBuilder.Entity<User>()
                 .HasMany(u => u.Customers)
                 .WithOne(c => c.User)
-                .HasForeignKey(c => c.UserId);
+                .HasForeignKey(c => c.UserId)
+                .OnDelete(DeleteBehavior.Cascade); // Excluímos em cascata se um usuário for excluído
 
             // Relacionamento: User -> ServicesBarber (um User pode ter muitos Services)
             modelBuilder.Entity<User>()
                 .HasMany(u => u.Services)
                 .WithOne(sb => sb.User)
-                .HasForeignKey(sb => sb.UserId);
+                .HasForeignKey(sb => sb.UserId)
+                .OnDelete(DeleteBehavior.Cascade); // Excluímos em cascata se um usuário for excluído
 
             // Relacionamento: Customer -> BookMark (um Customer pode ter muitas marcações)
             modelBuilder.Entity<Customer>()
                 .HasMany(c => c.BookMarks)
                 .WithOne(bm => bm.Customer)
-                .HasForeignKey(bm => bm.CustomerId);
+                .HasForeignKey(bm => bm.CustomerId)
+                .OnDelete(DeleteBehavior.Restrict); // Restringimos a exclusão em cascata para evitar conflitos
 
             // Definir a chave primária para ServicesBarber
             modelBuilder.Entity<ServicesBarber>()

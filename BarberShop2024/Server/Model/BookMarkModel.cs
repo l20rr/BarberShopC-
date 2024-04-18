@@ -6,6 +6,11 @@ namespace BarberShop2024.Server.Model
     public class BookMarkModel : IBookMark
     {
         private readonly DataContext _context;
+
+        public BookMarkModel(DataContext context)
+        {
+            _context = context;
+        }
         public async Task<BookMark> AddBook(BookMark bookMark)
         {
             var result = await _context.BookMarks.AddAsync(bookMark);

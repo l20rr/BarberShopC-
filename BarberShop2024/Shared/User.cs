@@ -13,9 +13,9 @@ namespace BarberShop2024.Shared
         public string UserPassword { get; set; }
 
         // Propriedade de navegação: um User pode ter muitos Customers
-        public ICollection<Customer> Customers { get; set; }
+        public ICollection<Customer>? Customers { get; set; }
 
         // Propriedade de navegação: um User pode ter muitos Services
-        public ICollection<ServicesBarber> Services { get; set; }
+        public ICollection<ServicesBarber>? Services { get; set; }
     }
 }

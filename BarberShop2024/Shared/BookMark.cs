@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace BarberShop2024.Shared
 {
-    public class BookMark
+     public class BookMark
     {
-        public int BookMarkId { get; set; } // Adicionando uma propriedade como chave primária
+        public int BookMarkId { get; set; } // Chave primária
 
         public DateTime DateBook { get; set; }
 
         // Chave estrangeira para o Customer
         public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
+        public Customer? Customer { get; set; }
+
+        
     }
 }

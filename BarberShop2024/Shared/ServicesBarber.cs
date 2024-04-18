@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BarberShop2024.Shared
 {
-    public class ServicesBarber
+public class ServicesBarber
     {
-        public int ServiceId { get; set; } // Adicionando uma propriedade como chave primária
+        public int ServiceId { get; set; } // Chave primária
 
         public string ServiceName { get; set; }
         public string ServiceDescription { get; set; }
@@ -16,6 +16,7 @@ namespace BarberShop2024.Shared
 
         // Chave estrangeira para o User
         public int UserId { get; set; }
-        public User User { get; set; }
+        public User? User { get; set; }
     }
+
 }

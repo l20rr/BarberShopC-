@@ -131,7 +131,7 @@ namespace BarberShop2024.Server.Migrations
                     b.HasOne("BarberShop2024.Shared.Customer", "Customer")
                         .WithMany("BookMarks")
                         .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Customer");
