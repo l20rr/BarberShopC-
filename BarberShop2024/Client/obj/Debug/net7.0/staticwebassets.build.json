@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7rcUgKJrHceHU2FbfpLkGHeUl5YUxsllCWfX3+W/w/Q=",
+  "Hash": "jjFmr76lmX0hLAklP4U0uaV8kifvI0N7v4lLa2Kecjw=",
   "Source": "BarberShop2024.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\35193\\.nuget\\packages\\mudblazor\\6.19.0\\staticwebassets\\MudBlazor.min.css",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\35193\\.nuget\\packages\\mudblazor\\6.19.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\35193\\.nuget\\packages\\mudblazor\\6.19.0\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\35193\\.nuget\\packages\\mudblazor\\6.19.0\\staticwebassets\\MudBlazor.min.js",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\35193\\.nuget\\packages\\mudblazor\\6.19.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\35193\\.nuget\\packages\\mudblazor\\6.19.0\\staticwebassets\\MudBlazor.min.js"
+    },
     {
       "Identity": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\BarberShop2024.Client.dll",
       "SourceId": "BarberShop2024.Client",
@@ -527,6 +561,40 @@
       "OriginalItemSpec": "C:\\Users\\35193\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.FileSystemGlobbing.dll"
     },
     {
+      "Identity": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.Abstractions.dll",
+      "SourceId": "BarberShop2024.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Localization.Abstractions.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\35193\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\7.0.17\\lib\\net7.0\\Microsoft.Extensions.Localization.Abstractions.dll"
+    },
+    {
+      "Identity": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.dll",
+      "SourceId": "BarberShop2024.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Localization.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\35193\\.nuget\\packages\\microsoft.extensions.localization\\7.0.17\\lib\\net7.0\\Microsoft.Extensions.Localization.dll"
+    },
+    {
       "Identity": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll",
       "SourceId": "BarberShop2024.Client",
       "SourceType": "Computed",
@@ -712,6 +780,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\35193\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.18\\runtimes\\browser-wasm\\lib\\net7.0\\mscorlib.dll"
+    },
+    {
+      "Identity": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MudBlazor.dll",
+      "SourceId": "BarberShop2024.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/MudBlazor.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\35193\\.nuget\\packages\\mudblazor\\6.19.0\\lib\\net7.0\\MudBlazor.dll"
     },
     {
       "Identity": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\netstandard.dll",
@@ -3757,6 +3842,23 @@
       "OriginalItemSpec": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Web.dll"
     },
     {
+      "Identity": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\obj\\Debug\\net7.0\\build-gz\\2o0+Xgrn.gz",
+      "SourceId": "BarberShop2024.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Localization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.dll"
+    },
+    {
       "Identity": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\obj\\Debug\\net7.0\\build-gz\\2Oaj74gf.gz",
       "SourceId": "BarberShop2024.Client",
       "SourceType": "Computed",
@@ -3908,6 +4010,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Linq.dll"
+    },
+    {
+      "Identity": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\obj\\Debug\\net7.0\\build-gz\\6U1ptisB.gz",
+      "SourceId": "BarberShop2024.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/MudBlazor.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MudBlazor.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MudBlazor.dll"
     },
     {
       "Identity": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\obj\\Debug\\net7.0\\build-gz\\6YXdJnbf.gz",
@@ -5115,6 +5234,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Text.Encoding.CodePages.dll"
+    },
+    {
+      "Identity": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\obj\\Debug\\net7.0\\build-gz\\jG73+VVg.gz",
+      "SourceId": "BarberShop2024.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Localization.Abstractions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.Abstractions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.Abstractions.dll"
     },
     {
       "Identity": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Client\\obj\\Debug\\net7.0\\build-gz\\JItDJYxQ.gz",

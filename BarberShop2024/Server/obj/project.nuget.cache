@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MTDP/0/R/aM+UwasP/ZJCwrlkkAkwTqAxCxVq6lQB4ytQoraXeR1vD9fTcnNTKPw3QUeREBetBScewIBB5McjA==",
+  "dgSpecHash": "5cDuM2IXIHwmEgdiFm0wCjSacUMquo4yAsnOVqgxN8kH78u3ld3Ccgh79tCex4Tg7dKwTrzdKLxL5lhKOnwUOA==",
   "success": true,
   "projectFilePath": "C:\\Users\\35193\\OneDrive\\Área de Trabalho\\BarberShop2024\\BarberShop2024\\Server\\BarberShop2024.Server.csproj",
   "expectedPackageFiles": [
@@ -39,6 +39,8 @@
     "C:\\Users\\35193\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\7.0.0\\microsoft.extensions.fileproviders.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\35193\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\7.0.0\\microsoft.extensions.fileproviders.physical.7.0.0.nupkg.sha512",
     "C:\\Users\\35193\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\7.0.0\\microsoft.extensions.filesystemglobbing.7.0.0.nupkg.sha512",
+    "C:\\Users\\35193\\.nuget\\packages\\microsoft.extensions.localization\\7.0.17\\microsoft.extensions.localization.7.0.17.nupkg.sha512",
+    "C:\\Users\\35193\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\7.0.17\\microsoft.extensions.localization.abstractions.7.0.17.nupkg.sha512",
     "C:\\Users\\35193\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\35193\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
     "C:\\Users\\35193\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
@@ -58,6 +60,7 @@
     "C:\\Users\\35193\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\35193\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\35193\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\35193\\.nuget\\packages\\mudblazor\\6.19.0\\mudblazor.6.19.0.nupkg.sha512",
     "C:\\Users\\35193\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\35193\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
     "C:\\Users\\35193\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",

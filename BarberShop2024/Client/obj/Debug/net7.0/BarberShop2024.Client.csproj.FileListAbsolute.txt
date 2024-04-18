@@ -834,3 +834,15 @@ C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\o
 C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\obj\Debug\net7.0\build-gz\kdm1C+Mo.gz
 C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\obj\Debug\net7.0\build-gz\u3kA+x7i.gz
 C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\obj\Debug\net7.0\build-gz\CAV+y+Sd.gz
+C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Localization.dll
+C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\bin\Debug\net7.0\wwwroot\_framework\MudBlazor.dll
+C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Localization.dll.gz
+C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\bin\Debug\net7.0\wwwroot\_framework\MudBlazor.dll.gz
+C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Extensions.Localization.Abstractions.dll.gz
+C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\bin\Debug\net7.0\Microsoft.Extensions.Localization.dll
+C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\bin\Debug\net7.0\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\bin\Debug\net7.0\MudBlazor.dll
+C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\obj\Debug\net7.0\build-gz\2o0+Xgrn.gz
+C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\obj\Debug\net7.0\build-gz\jG73+VVg.gz
+C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Client\obj\Debug\net7.0\build-gz\6U1ptisB.gz

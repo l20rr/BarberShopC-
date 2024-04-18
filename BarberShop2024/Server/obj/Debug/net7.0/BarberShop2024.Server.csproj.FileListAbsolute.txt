@@ -96,3 +96,6 @@ C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Server\o
 C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Server\obj\Debug\net7.0\BarberShop2024.Server.pdb
 C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Server\obj\Debug\net7.0\BarberShop2024.Server.genruntimeconfig.cache
 C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Server\obj\Debug\net7.0\ref\BarberShop2024.Server.dll
+C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Server\bin\Debug\net7.0\Microsoft.Extensions.Localization.dll
+C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Server\bin\Debug\net7.0\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\35193\OneDrive\Área de Trabalho\BarberShop2024\BarberShop2024\Server\bin\Debug\net7.0\MudBlazor.dll
