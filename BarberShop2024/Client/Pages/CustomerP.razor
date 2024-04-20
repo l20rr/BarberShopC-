@@ -1,0 +1,40 @@
+﻿@page "/customer"
+@using System.Net.Http.Json
+@using BarberShop2024.Shared;
+@inject HttpClient Http
+
+@if (Customers.Count <= 0)
+{
+    <div>
+        <span>Por favor, introduza dados.</span>
+    </div>
+}
+else
+{
+    <MudDataGrid Items="@Customers.Take(4)">
+        <Columns>
+            <PropertyColumn Property="x => x.CustomerId" Title="CustomerId" />
+            <PropertyColumn Property="x => x.CustomerName" />
+            <PropertyColumn Property="x => x.NIF" />
+            <PropertyColumn Property="x => x.CustomerEmail" />
+            <PropertyColumn Property="x => x.Phone" Title="Phone" />
+                 <TemplateColumn CellClass="d-flex justify-end">
+            <CellTemplate>
+                <MudStack Row>
+                     <MudButton Size="@Size.Small" Variant="@Variant.Filled" Color="@Color.Secondary">Edit</MudButton>
+                    <MudButton Size="@Size.Small" Variant="@Variant.Filled" Color="@Color.Error">Delete</MudButton>
+                </MudStack>
+            </CellTemplate>
+        </TemplateColumn>
+        </Columns>
+    </MudDataGrid>
+}
+
+@code {
+    private List<Customer> Customers = new List<Customer>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Customers = await Http.GetFromJsonAsync<List<Customer>>("api/customer");
+    }
+}

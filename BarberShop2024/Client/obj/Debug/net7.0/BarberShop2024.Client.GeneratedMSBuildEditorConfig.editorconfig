@@ -20,12 +20,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/35193/OneDrive/Área de Trabalho/BarberShop2024/BarberShop2024/Client/Pages/Customer.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXIucmF6b3I=
+[C:/Users/35193/OneDrive/Área de Trabalho/BarberShop2024/BarberShop2024/Client/Pages/CustomerP.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/35193/OneDrive/Área de Trabalho/BarberShop2024/BarberShop2024/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/35193/OneDrive/Área de Trabalho/BarberShop2024/BarberShop2024/Client/Pages/Profile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/35193/OneDrive/Área de Trabalho/BarberShop2024/BarberShop2024/Client/Shared/SurveyPrompt.razor]
