@@ -1,5 +1,60 @@
-﻿<h3>Profile</h3>
+﻿@page "/user"
+@using System.Net.Http.Json
+@using BarberShop2024.Shared;
+@inject HttpClient Http
+<style>
+    .centered-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh; /* Define a altura da tela inteira */
+        width:auto;
+        padding:10px;
+    }
+
+    .MudCard{
+        height: 40vh;
+        width: 30vw;
+        text-align:center;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+</style>
+
+<div class="centered-container">
+    @foreach (var profile in Users)
+    {
+        <MudCard class="MudCard">
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h6">Profile: @profile.UserId</MudText>
+                </CardHeaderContent>
+                <CardHeaderActions>
+                    <MudIconButton Icon="@Icons.Material.Filled.Settings" Color="Color.Default" />
+                </CardHeaderActions>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudText><strong>Email:</strong> @profile.UserEmail</MudText>
+                <hr>
+                <MudText Typo="Typo.body2"><strong>Password:</strong> @profile.UserPassword</MudText>
+            </MudCardContent>
+        </MudCard>
+    }
+</div>
 
 @code {
+    List<User> Users = new List<User>();
 
+    protected override async Task OnInitializedAsync()
+    {
+        var resultuser = await Http.GetFromJsonAsync<List<User>>("api/user");
+        if (resultuser != null)
+        {
+            Users = resultuser;
+        }
+
+    }
 }

@@ -1,12 +1,8 @@
 {
   "dependencies": {
-    "secrets1": {
-      "type": "secrets"
-    },
     "mssql1": {
       "type": "mssql",
-      "connectionId": "ConnectionStrings:Server=(localdb):mssqllocaldb;Database=BarberShop;Trusted_Connection=True;MultipleActiveResultSets=true",
-      "dynamicId": null
+      "connectionId": "ConnectionStrings:DefaultConnection"
     }
   }
 }

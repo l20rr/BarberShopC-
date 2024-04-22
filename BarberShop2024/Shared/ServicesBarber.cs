@@ -10,8 +10,8 @@ public class ServicesBarber
     {
         public int ServiceId { get; set; } // Chave primária
 
-        public string ServiceName { get; set; }
-        public string ServiceDescription { get; set; }
+        public required string ServiceName { get; set; }
+        public string? ServiceDescription { get; set; }
         public double ServicePrice { get; set; }
 
         // Chave estrangeira para o User

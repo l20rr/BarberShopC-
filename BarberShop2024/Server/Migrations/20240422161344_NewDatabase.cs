@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BarberShop2024.Server.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class NewDatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,6 +18,10 @@ namespace BarberShop2024.Server.Migrations
                     UserId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserPhone = table.Column<int>(type: "int", nullable: false),
+                    UserAdress = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ShopName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserPassword = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -55,7 +59,7 @@ namespace BarberShop2024.Server.Migrations
                     ServiceId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ServiceName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ServiceDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ServiceDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ServicePrice = table.Column<double>(type: "float", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -87,7 +91,7 @@ namespace BarberShop2024.Server.Migrations
                         column: x => x.CustomerId,
                         principalTable: "Customers",
                         principalColumn: "CustomerId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(

@@ -9,10 +9,10 @@ namespace BarberShop2024.Shared
    public class Customer
     {
         public int CustomerId { get; set; }
-        public string CustomerName { get; set; }
+        public required string CustomerName { get; set; }
         public int NIF { get; set; }
-        public string CustomerEmail { get; set; }
-        public string Phone { get; set; }
+        public required string CustomerEmail { get; set; }
+        public required string Phone { get; set; }
         
         // Chave estrangeira para o User
         public int UserId { get; set; }

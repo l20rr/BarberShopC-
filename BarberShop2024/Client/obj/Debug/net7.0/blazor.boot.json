@@ -201,15 +201,15 @@
       "mscorlib.dll": "sha256-0HcXGniS+WAs4hupbRUCnwMELwoYJxH9EvPE3IR0EqQ=",
       "netstandard.dll": "sha256-NXaYbCfP6xdQO3fJkzooXzSY4o1\/iQDrumjom6Lm57g=",
       "System.Private.CoreLib.dll": "sha256-liKvB0yZJmhm3WN18TOgTvS9tWwMZzi0mlqZNDk8Pkg=",
-      "BarberShop2024.Shared.dll": "sha256-150AeIvaMqboEXHYLhhaP8ZpffRjHlGnNUOCuiji0+s=",
-      "BarberShop2024.Client.dll": "sha256-rhcP3XbOfaWOs+7xZqxcKRXh0JQba+Q9Q0jtOU22Otg="
+      "BarberShop2024.Shared.dll": "sha256-ZO3+T4hTsCbCg2OsF4kxHzy1B1U9U4dwZ+7Q0i8SWIw=",
+      "BarberShop2024.Client.dll": "sha256-iZSUA6QAaWPkkOCauwA73hB+FWJiqBPQlQjtyo9iSxU="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "BarberShop2024.Shared.pdb": "sha256-ET5IT7amzniSK6Yh6rpvWGgyOM0rSGtn3JZss4GcMB0=",
-      "BarberShop2024.Client.pdb": "sha256-AoC9F88vp1XfONSUkd3CXSMnCRLrBUCbsHaq8G+QkXE="
+      "BarberShop2024.Shared.pdb": "sha256-gQzeoZp6amz6GgoWOOhPRxgVKIJ7VXZtwow9lp3+2dQ=",
+      "BarberShop2024.Client.pdb": "sha256-sOuH293wYs3FAEOOQrXKIJAbPenkI7pQhgmNTl+yDhA="
     },
     "runtime": {
       "dotnet.7.0.18.eil80xb82a.js": "sha256-lsqy0PQ8nf1\/0sSlLGe3Kfwi8V0Q1QzVy5+AqtJ3cfU=",
