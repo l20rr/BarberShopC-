@@ -27,6 +27,8 @@
 <div class="centered-container">
     @foreach (var profile in Users)
     {
+        @if (@profile.UserId == 2)
+        {
         <MudCard class="MudCard">
             <MudCardHeader>
                 <CardHeaderContent>
@@ -42,6 +44,7 @@
                 <MudText Typo="Typo.body2"><strong>Password:</strong> @profile.UserPassword</MudText>
             </MudCardContent>
         </MudCard>
+        }
     }
 </div>
 

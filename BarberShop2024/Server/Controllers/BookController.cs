@@ -65,5 +65,20 @@ namespace BarberShop2024.Server.Controllers
 
             return CreatedAtAction(nameof(GetAllBooks), new { bookMarkId = addedBook.BookMarkId }, AddBook); // Retorna 201 com os dados do serviço adicionado
         }
+
+        [HttpDelete("{bookMarkId}")]
+        public IActionResult BookToDelete(int bookMarkId)
+        {
+            if (bookMarkId == 0)
+                return BadRequest();
+
+            var userToDelete = _bookMarkModel.GetBookById(bookMarkId);
+            if (userToDelete == null)
+                return NotFound();
+
+            _bookMarkModel.DeleteBook(bookMarkId);
+
+            return NoContent();
+        }
     }
 }

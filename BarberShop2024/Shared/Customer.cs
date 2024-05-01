@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,9 +10,12 @@ namespace BarberShop2024.Shared
    public class Customer
     {
         public int CustomerId { get; set; }
+        [Required(ErrorMessage = "Digite o Nome!")]
         public required string CustomerName { get; set; }
         public int NIF { get; set; }
+        [Required(ErrorMessage = "Digite o email!")]
         public required string CustomerEmail { get; set; }
+        [Required(ErrorMessage = "Digite o telefone!")]
         public required string Phone { get; set; }
         
         // Chave estrangeira para o User

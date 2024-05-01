@@ -1,0 +1,80 @@
+﻿@page "/books"
+@using System.Net.Http.Json
+@using BarberShop2024.Shared;
+@inject HttpClient Http
+
+
+@if (CombinedDataList == null || !CombinedDataList.Any())
+{
+    <div>
+        <span>Por favor, introduza dados.</span>
+    </div>
+}
+else
+{
+    <MudDataGrid Items="@GetFilteredData().Take(4)">
+        <Columns>
+            <PropertyColumn Property="x => x.BookMarkId" Title="BookMarkId" />
+            <PropertyColumn Property="x => x.ServicesSelect" />
+            <PropertyColumn Property="x => x.CustomerName" />
+            <PropertyColumn Property="x => x.DateBook" />
+            <PropertyColumn Property="x => x.Phone" Title="Phone" />
+            <TemplateColumn CellClass="d-flex justify-end">
+                <CellTemplate>
+                    <MudStack Row>
+                     <MudButton Size="@Size.Small" Variant="@Variant.Filled" Color="@Color.Secondary">Edit</MudButton>
+                     <MudButton Size="@Size.Small" Variant="@Variant.Filled" Color="@Color.Error">Delete</MudButton>
+                 </MudStack>
+             </CellTemplate>
+         </TemplateColumn>
+     </Columns>
+ </MudDataGrid>
+}
+@code {
+    private List<CombinedData> CombinedDataList;
+    private List<Customer> Customers = new List<Customer>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var bookMarks = await Http.GetFromJsonAsync<List<BookMark>>("api/book");
+            var customers = await Http.GetFromJsonAsync<List<Customer>>("api/customer");
+
+            CombinedDataList = CombineData(bookMarks, customers);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao buscar dados: {ex.Message}");
+        }
+    }
+
+    private List<CombinedData> CombineData(List<BookMark> bookMarks, List<Customer> customers)
+    {
+        var combinedList = new List<CombinedData>();
+
+        foreach (var bookMark in bookMarks)
+        {
+            var customer = customers.FirstOrDefault(c => c.UserId == 2); // Seleciona o primeiro cliente com UserId == 2
+
+            if (customer != null) // Verifica se um cliente foi encontrado
+            {
+                combinedList.Add(new CombinedData
+                    {
+                        BookMarkId = bookMark.BookMarkId,
+                        DateBook = bookMark.DateBook,
+                        ServicesSelect = bookMark.ServicesSelect,
+                        CustomerName = customer.CustomerName,
+                        Phone = customer.Phone,
+                        UserId = customer.UserId // Definindo o UserId para CombinedData
+                    });
+            }
+        }
+
+        return combinedList;
+    }
+    private IEnumerable<CombinedData> GetFilteredData()
+    {
+        return CombinedDataList.Where(data => data.UserId == 2);
+    }
+}
