@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace BarberShop2024.Shared
 {
-   public class Customer
+    public class Customer
     {
         public int CustomerId { get; set; }
         [Required(ErrorMessage = "Digite o Nome!")]
-        public required string CustomerName { get; set; }
+        public string CustomerName { get; set; }
         public int NIF { get; set; }
         [Required(ErrorMessage = "Digite o email!")]
-        public required string CustomerEmail { get; set; }
+        public string CustomerEmail { get; set; }
         [Required(ErrorMessage = "Digite o telefone!")]
-        public required string Phone { get; set; }
-        
+        public string Phone { get; set; }
+
         // Chave estrangeira para o User
         public int UserId { get; set; }
         public User? User { get; set; }

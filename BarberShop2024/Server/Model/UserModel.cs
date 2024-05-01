@@ -47,7 +47,11 @@ namespace BarberShop2024.Server.Model
 
                 foundUser.UserEmail = user.UserEmail;
                 foundUser.UserPassword = user.UserPassword;
-            
+                foundUser.ShopName = user.ShopName;
+                foundUser.UserPhone = user.UserPhone;
+                foundUser.UserAdress = user.UserAdress;
+                
+
 
                 _context.SaveChangesAsync();
 

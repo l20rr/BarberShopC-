@@ -38,25 +38,23 @@ namespace BarberShop2024.Server.Model
             return _context.Customers.FirstOrDefault(c => c.CustomerId == customerId);
         }
 
-        public Customer UpdateCustomer(int customerId, Customer customer)
+        public async Task<Customer> UpdateCustomer(int customerId, Customer customer)
         {
-
-            var foundCustomer = _context.Customers.FirstOrDefault(e => e.CustomerId == customer.CustomerId);
+            var foundCustomer = await _context.Customers.FindAsync(customerId);
 
             if (foundCustomer != null)
             {
-
                 foundCustomer.CustomerName = customer.CustomerName;
                 foundCustomer.CustomerEmail = customer.CustomerEmail;
+                foundCustomer.NIF = customer.NIF;
+                foundCustomer.Phone = customer.Phone;
 
-
-                _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
 
                 return foundCustomer;
             }
 
             return null;
-
         }
     }
 }

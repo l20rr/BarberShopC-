@@ -7,7 +7,7 @@ namespace BarberShop2024.Server.Model
         IEnumerable<Customer> GetAllCustomer();
         Customer GetCustomerById(int customerId);
         Task<Customer> AddCustomer(Customer customer);
-        Customer UpdateCustomer(int customerId, Customer customer);
+        Task<Customer> UpdateCustomer(int customerId, Customer customer); // Alterado para Task
         void DeleteCustomer(int customerId);
     }
 }

@@ -1,0 +1,107 @@
+﻿@page "/customerd"
+
+@using BarberShop2024.Shared;
+@inject HttpClient Http
+
+
+
+<style>
+    .centered-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh; /* Define a altura da tela inteira */
+        width: auto;
+        flex-direction:column;
+        padding: 10px;
+      
+    }
+
+    .MudCard {
+        height: 40vh;
+        width: 30vw;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+</style>
+
+<div class="centered-container">
+    @foreach (var profile in Customers)
+    {
+        @if (profile.CustomerId == 2)
+        {
+            <h3>CustomerD</h3>
+            <MudCard class="MudCard">
+                @if (op)
+                {
+                    <MudCardHeader>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.h6">Name: @profile.CustomerName</MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudText><strong>Phone:</strong> @profile.Phone</MudText>
+                        <hr>
+                        <MudText Typo="Typo.body2"><strong>Email:</strong> @profile.CustomerEmail</MudText>
+                        <hr>
+                        <MudText Typo="Typo.body2"><strong>NIF:</strong> @profile.NIF</MudText>
+                    </MudCardContent>
+                    <MudButton Size="@Size.Medium" Variant="@Variant.Filled" Color="@Color.Secondary" @onclick="() => ChangeToEditMode(profile)">editar</MudButton>
+                }
+                else
+                {
+                    <MudCardHeader>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.h6">Name: <input type="text" @bind="@profile.CustomerName" /></MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudText><strong>Phone:</strong> <input type="text" @bind="@profile.Phone" /></MudText>
+                        <hr>
+                        <MudText Typo="Typo.body2"><strong>Email:</strong> <input type="text" @bind="@profile.CustomerEmail" /></MudText>
+                        <hr>
+                        <MudText Typo="Typo.body2"><strong>NIF:</strong> <input type="text" @bind="@profile.NIF" /></MudText>
+                    </MudCardContent>
+                    <MudButton Size="@Size.Medium" Variant="@Variant.Filled" Color="@Color.Secondary" @onclick="SaveData">save</MudButton>
+
+                }
+            </MudCard>
+        }
+    }
+</div>
+
+@code {
+    private List<Customer> Customers = new List<Customer>();
+    private bool op = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Customers = await Http.GetFromJsonAsync<List<Customer>>("api/customer");
+    }
+
+    private void ChangeToEditMode(Customer profile)
+    {
+        op = false;
+        // Se necessário, você pode fazer uma cópia dos dados do cliente para evitar a modificação direta do objeto original.
+        // Isso depende da implementação da classe Customer.
+    }
+
+    private async Task SaveData()
+    {
+        // Encontra o cliente com o CustomerId 2 e envia os dados atualizados para a API usando o método PUT.
+        var profile = Customers.FirstOrDefault(p => p.CustomerId == 2);
+        if (profile != null)
+        {
+            var response = await Http.PutAsJsonAsync($"api/customer/{profile.CustomerId}", profile);
+            if (response.IsSuccessStatusCode)
+            {
+                // Se a atualização for bem-sucedida, volte para o modo de visualização.
+                op = true;
+            }
+        }
+    }
+}
