@@ -72,14 +72,20 @@ namespace BarberShop2024.Server.Controllers
         [HttpPut("{customerId}")]
         public IActionResult UpdateCustomer(int customerId, [FromBody] Customer customer)
         {
-            var updateCustomer = _customerModel.UpdateCustomer(customerId, customer);
+            if (customer == null)
+                return BadRequest();
 
-            if (updateCustomer == null)
-            {
-                return NotFound(); // Retorna 404 se não for encontrado
-            }
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            return Ok(updateCustomer); // Retorna 200 com os dados  atualizados
+            var customerToUpdate = _customerModel.GetCustomerById(customer.CustomerId);
+
+            if (customerToUpdate == null)
+                return NotFound();
+
+            _customerModel.UpdateCustomer(customer);
+
+            return NoContent(); //success
         }
     }
 }

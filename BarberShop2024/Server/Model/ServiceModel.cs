@@ -48,7 +48,10 @@ namespace BarberShop2024.Server.Model
                 foundServer.ServiceName = servicesBarber.ServiceName;
                 foundServer.ServiceDescription = servicesBarber.ServiceDescription;
                 foundServer.ServicePrice = servicesBarber.ServicePrice;
-             
+                foundServer.UserId = servicesBarber.UserId;
+                
+
+
 
 
                 _context.SaveChangesAsync();

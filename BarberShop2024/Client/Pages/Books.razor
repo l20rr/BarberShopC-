@@ -12,6 +12,7 @@
 }
 else
 {
+    <input type="text" placeholder="pesquisa" />
     <MudDataGrid Items="@GetFilteredData().Take(4)">
         <Columns>
             <PropertyColumn Property="x => x.BookMarkId" Title="BookMarkId" />

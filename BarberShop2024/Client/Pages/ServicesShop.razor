@@ -1,0 +1,42 @@
+﻿@page "/services"
+@using System.Net.Http.Json
+@using BarberShop2024.Shared;
+@inject HttpClient Http
+
+<input type="text" placeholder="pesquisa" />
+<MudDataGrid Items="@GetFilteredServices().Take(4)">
+        <Columns>
+            <PropertyColumn Property="x => x.ServiceId" Title="service id" />
+        <PropertyColumn Property="x => x.ServiceName" Title="service name" />
+        <PropertyColumn Property="x => x.ServiceDescription" Title="service description" />
+        <PropertyColumn Property="x => x.ServicePrice " Title="price &euro;" />
+     
+            <TemplateColumn CellClass="d-flex justify-end">
+                <CellTemplate>
+                    <MudStack Row>
+                     <MudButton Size="@Size.Small" Variant="@Variant.Filled" Color="@Color.Secondary">Edit</MudButton>
+                     <MudButton Size="@Size.Small" Variant="@Variant.Filled" Color="@Color.Error">Delete</MudButton>
+                 </MudStack>
+             </CellTemplate>
+         </TemplateColumn>
+     </Columns>
+ </MudDataGrid>
+
+@code {
+    List<ServicesBarber> ServicesBarbers = new List<ServicesBarber>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var resultuser = await Http.GetFromJsonAsync<List<ServicesBarber>>("api/services");
+        if (resultuser != null)
+        {
+            ServicesBarbers = resultuser;
+        }
+
+    }
+
+    private IEnumerable<ServicesBarber> GetFilteredServices()
+    {
+        return ServicesBarbers.Where(c => c.UserId == 2);
+    }
+}
